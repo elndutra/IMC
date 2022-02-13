@@ -48,7 +48,7 @@
                                 </constraints>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ex: 1.75" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6AW-UC-Xsd">
                                 <rect key="frame" x="262" y="358" width="100" height="40"/>
@@ -58,7 +58,7 @@
                                 </constraints>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4e-ra-leV">
                                 <rect key="frame" x="52" y="423" width="310" height="40"/>
@@ -74,8 +74,11 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NE3-rg-BgR"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ksr-iY-LoH">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ksr-iY-LoH">
                                 <rect key="frame" x="0.0" y="488" width="414" height="374"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6Z-sE-S8O">
@@ -126,6 +129,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wMr-xX-n7D" secondAttribute="trailing" constant="16" id="wIp-cr-Bdm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imResult" destination="C3R-QQ-fWa" id="fId-Wd-iXC"/>
+                        <outlet property="lbResult" destination="Z6Z-sE-S8O" id="oAU-EM-P4O"/>
+                        <outlet property="tfHeight" destination="6AW-UC-Xsd" id="4gi-Po-MNv"/>
+                        <outlet property="tfWeight" destination="EMZ-yK-KzI" id="sZ6-fb-cMf"/>
+                        <outlet property="viResult" destination="Ksr-iY-LoH" id="LRp-BY-G8M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
